@@ -25,6 +25,10 @@
     "phillips",
     "automation"
   ],
-  "author": "Chris Sprague",
+  "author": {
+    "name": "Chris Sprague",
+    "email": "chris@chaoscontrol.org",
+    "url": "http://chaoscontrol.org"
+  },
   "license": "MIT"
 }
