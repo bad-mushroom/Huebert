@@ -16,7 +16,7 @@ module.exports = () => {
       break;
 
     case 'lights':
-      require('./cmds/list')(args)
+      require('./cmds/lights')(args)
       break;
 
     case 'version':
