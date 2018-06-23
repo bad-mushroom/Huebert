@@ -1,13 +1,30 @@
 const menus = {
   main: `
-    huebert [command] <options>
+    Usage: huebert [command] <options>
 
-    bridge ............. show information about the connected bridge
-    version ............ show package version
-    help ............... show help menu for a command`,
+    \t bridge ............. show information about the connected bridge
+    \t lights ............. list lights connected to bridge
+    \t version ............ show package version
+    \t help ............... show help menu for a command`,
 
   bridge: `
-    huebert bridge <options>`,
+    Usage: huebert bridge <options>
+
+    Options:
+    \t --host=[=HOST]                       Specify a host, overriding env setting
+
+    Examples:
+    \t huebert bridge                        Connect to bridge at default address (set in .env)
+    \t huebert bridge --host=1.2.3.4         Connect to bridge at address 1.2.3.4
+    `,
+
+  lights: `
+    Usage: huebert lights <id> <options>
+
+    Examples:
+    \t huebert lights 1 .................. Show details for light #1
+    \t huebert lights 2 --on ............. Turn light #2 on
+    \t huebert lights 2 --off ............ Turn light #2 off`,
 }
 
 module.exports = (args) => {
