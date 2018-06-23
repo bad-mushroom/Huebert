@@ -1,4 +1,4 @@
 module.exports = (message, err) => {
-  console.error(message)
+  console.error(message, err);
   process.exit(1)
 }

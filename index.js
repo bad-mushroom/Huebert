@@ -8,7 +8,11 @@ module.exports = () => {
 
   switch (cmd) {
     case 'bridge':
-      require('./cmds/bridge')(args)
+      if (args.discover) {
+          require('./cmds/discover')(args)
+      } else {
+          require('./cmds/bridge')(args)
+      }
       break;
 
     case 'lights':
